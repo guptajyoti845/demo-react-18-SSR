@@ -3,20 +3,23 @@ import {Suspense, lazy, useState} from "react";
 
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
-const CarsComponent = lazy(() =>
-    delay(10500).then(() => import("./Cars.js" /* webpackPrefetch: true */))
-);
-
 const HeadersComponent = lazy(() =>
-    delay(10000).then(() => import("./Header.js" /* webpackPrefetch: true */))
+    delay(300).then(() => import("./Header.js" /* webpackPrefetch: true */))
 );
 
 const SidebarComponent = lazy(() =>
-    delay(16900).then(() => import("./Sidebar.js" /* webpackPrefetch: true */))
+    delay(10000).then(() => import("./Sidebar.js" /* webpackPrefetch: true */))
+);
+
+const CarsComponent = lazy(() =>
+    delay(100).then(() => import("./Cars.js" /* webpackPrefetch: true */))
+);
+
+const CarDetailComponent = lazy(() =>
+    delay(200).then(() => import("./CarDetail.js"))
 );
 
 const FooterComponent = lazy(() => import("./Footer.js"));
-const CarDetailComponent = lazy(() => import("./CarDetail.js"));
 
 const LoadingScreen = () => <div>Loading Cars...</div>;
 const LoadingHeaderScreen = () => <div>Loading Header...</div>;

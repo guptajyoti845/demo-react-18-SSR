@@ -1,7 +1,7 @@
 import App from "./App";
 import PropTypes from 'prop-types';
 
-const AppSSR = ({ bootStrapCSS }) => {
+const AppSSR = ({ bootStrapCSS=[] }) => {
     console.log('Rendering App component on server-side');
     return (
         <html>
