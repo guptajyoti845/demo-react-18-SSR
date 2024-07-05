@@ -1,8 +1,10 @@
+/* Sidebar.css */
 .sidebar {
     width: 250px;
     padding: 20px;
     border-right: 1px solid #ccc;
     background-color: #fafafa;
+    transition: width 0.3s ease;
 }
 
 .sidebar h3 {
@@ -12,4 +14,45 @@
 
 .sidebar p {
     color: #666;
+}
+
+.links {
+    margin-bottom: 20px;
+}
+
+.links a {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 16px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.sidebar button {
+    display: block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar button:hover {
+    background-color: #0056b3;
+}
+
+.message {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    color: #333;
 }

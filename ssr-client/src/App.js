@@ -11,7 +11,10 @@ const HeadersComponent = lazy(() =>
     delay(10000).then(() => import("./Header.js" /* webpackPrefetch: true */))
 );
 
-const SidebarComponent = lazy(() => import("./Sidebar.js"));
+const SidebarComponent = lazy(() =>
+    delay(16900).then(() => import("./Sidebar.js" /* webpackPrefetch: true */))
+);
+
 const FooterComponent = lazy(() => import("./Footer.js"));
 const CarDetailComponent = lazy(() => import("./CarDetail.js"));
 
