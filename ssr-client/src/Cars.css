@@ -1,9 +1,27 @@
-.root {
-    background: #EEE;
-    border: 1px solid #CCC;
+.cars {
     padding: 20px;
 }
 
-.root h2 {
+.cars h2 {
     margin-bottom: 20px;
+    color: #333;
+}
+
+.cars ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.cars li {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.cars li:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }

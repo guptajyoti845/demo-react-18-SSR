@@ -1,10 +1,7 @@
 .header {
-    width: 100%;
-    background-color: #CCC;
-    color: black;
-    border-bottom: 2px solid black;
-    padding: 8px;
-    display: flex;
-    align-items: center;
-    justify-content:center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    font-size: 24px;
 }

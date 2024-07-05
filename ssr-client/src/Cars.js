@@ -1,17 +1,25 @@
 import "./Cars.css";
 
-const Cars = () => {
-    return <div className="root">
-        <h2>Cars</h2>
-        <div>
+const Cars = ({ setSelectedCar }) => {
+    const cars = [
+        { name: "Ferrari", details: "Fast and red" },
+        { name: "Porsche", details: "Luxurious and powerful" },
+        { name: "Lamborghini", details: "Stylish and fast" },
+        { name: "Lexus", details: "Reliable and comfortable" }
+    ];
+
+    return (
+        <div className="cars">
+            <h2>Cars</h2>
             <ul>
-                <li>Ferrari</li>
-                <li>Porsche</li>
-                <li>Lamborghini</li>
-                <li>Lexus</li>
+                {cars.map(car => (
+                    <li key={car.name} onClick={() => setSelectedCar(car)}>
+                        {car.name}
+                    </li>
+                ))}
             </ul>
         </div>
-    </div>
+    );
 }
 
 export default Cars;
