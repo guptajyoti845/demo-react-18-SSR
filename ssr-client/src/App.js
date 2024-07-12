@@ -12,7 +12,7 @@ const SidebarComponent = lazy(() =>
 );
 
 const CarsComponent = lazy(() =>
-    delay(8000).then(() => import("./Cars.js" ))
+    delay(2000).then(() => import("./Cars.js" ))
 );
 
 const CarDetailComponent = lazy(() =>
