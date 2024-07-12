@@ -1,11 +1,11 @@
 import "./Cars.css";
 
-const Cars = ({ setSelectedCar }) => {
+const Cars = ({setSelectedCar}) => {
     const cars = [
-        { name: "Ferrari", details: "Fast and red" },
-        { name: "Porsche", details: "Luxurious and powerful" },
-        { name: "Lamborghini", details: "Stylish and fast" },
-        { name: "Lexus", details: "Reliable and comfortable" }
+        {name: "Tata Tiago", details: "Fast and red"},
+        {name: "Ford Figo", details: "Luxurious and powerful"},
+        {name: "Volkswagen Polo", details: "Stylish and fast"},
+        {name: "Toyota Yaris", details: "Reliable and comfortable"}
     ];
 
     return (
