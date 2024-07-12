@@ -4,25 +4,24 @@ import {Suspense, lazy, useState} from "react";
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 const HeadersComponent = lazy(() =>
-    delay(300).then(() => import("./Header.js" /* webpackPrefetch: true */))
+     import("./Header.js")
 );
 
 const SidebarComponent = lazy(() =>
-    delay(10000).then(() => import("./Sidebar.js" /* webpackPrefetch: true */))
+    delay(1000).then(() => import("./Sidebar.js"))
 );
 
 const CarsComponent = lazy(() =>
-    delay(100).then(() => import("./Cars.js" /* webpackPrefetch: true */))
+    delay(8000).then(() => import("./Cars.js" ))
 );
 
 const CarDetailComponent = lazy(() =>
-    delay(200).then(() => import("./CarDetail.js"))
+    delay(100).then(() => import("./CarDetail.js"))
 );
 
 const FooterComponent = lazy(() => import("./Footer.js"));
 
 const LoadingScreen = () => <div>Loading Cars...</div>;
-const LoadingHeaderScreen = () => <div>Loading Header...</div>;
 const LoadingSidebarScreen = () => <div>Loading Sidebar...</div>;
 const LoadingFooterScreen = () => <div>Loading Footer...</div>;
 const LoadingCarDetailScreen = () => <div>Loading Car Details...</div>;
@@ -32,10 +31,7 @@ function App() {
 
     return (
         <>
-            <Suspense fallback={<LoadingHeaderScreen/>}>
-                <HeadersComponent/>
-            </Suspense>
-
+            <HeadersComponent/>
             <div className="app-layout">
                 <Suspense fallback={<LoadingSidebarScreen/>}>
                     <SidebarComponent/>
