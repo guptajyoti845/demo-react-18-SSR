@@ -1,13 +1,6 @@
 import "./Cars.css";
 
-const Cars = ({ setSelectedCar }) => {
-    const cars = [
-        { name: "Ferrari", details: "Fast and red" },
-        { name: "Porsche", details: "Luxurious and powerful" },
-        { name: "Lamborghini", details: "Stylish and fast" },
-        { name: "Lexus", details: "Reliable and comfortable" }
-    ];
-
+const Cars = ({ cars, setSelectedCar }) => {
     return (
         <div className="cars">
             <h2>Cars</h2>
@@ -20,6 +13,6 @@ const Cars = ({ setSelectedCar }) => {
             </ul>
         </div>
     );
-}
+};
 
 export default Cars;
