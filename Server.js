@@ -4,7 +4,7 @@ import path from "path";
 import AppSSR from "./ssr-client/src/AppSSR";
 import express from "express";
 import fs from "fs";
-import { delay } from "./ssr-client/src/utils"; // Import delay function
+import { delay } from "ssr-client/src/utils";
 
 const app = express();
 const port = 3009;
@@ -15,14 +15,13 @@ const staticPathRoot = "ssr-client/build/static";
 
 // Simulate data fetching functions
 const fetchDataForComponents = async () => {
-    // Simulate data fetching with delays
-    await delay(2000); // Simulate delay for all components
+    await delay(2000);
     return {
         cars: [
-            { name: "Ferrari", details: "Fast and red" },
-            { name: "Porsche", details: "Luxurious and powerful" },
-            { name: "Lamborghini", details: "Stylish and fast" },
-            { name: "Lexus", details: "Reliable and comfortable" }
+            { name: "Tata Tiago", details: "Fast and red" },
+            { name: "Ford Figo", details: "Luxurious and powerful" },
+            { name: "Volkswagen Polo", details: "Stylish and fast" },
+            { name: "Toyota Yaris", details: "Reliable and comfortable" }
         ]
     };
 };
