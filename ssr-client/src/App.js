@@ -4,7 +4,7 @@ import {Suspense, lazy, useState} from "react";
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 const HeadersComponent = lazy(() =>
-     import("./Header.js")
+    import("./Header.js")
 );
 
 const SidebarComponent = lazy(() =>
