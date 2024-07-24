@@ -1,6 +1,15 @@
 # React 18 SSR Example Using Pipeable Stream
 
-This example demonstrates how to render a React 18 application on the server-side using a Node.js application. We utilize React 18's `renderToPipeableStream` function to achieve server-side rendering (SSR) with Suspense. Both the client and server sides benefit from React 18's advanced features, including Suspense for data fetching and asynchronous component rendering.
+## Traditional SSR Approach:
+
+![img_1.png](ssr-client/src/assets/img_9.png)
+
+![img.png](ssr-client/src/assets/img_8.png)
+
+This example demonstrates how to render a React 18 application on the server-side using a Node.js
+application. We utilize React 18's `renderToPipeableStream` function to achieve server-side
+rendering (SSR) with Suspense. Both the client and server sides benefit from React 18's advanced
+features, including Suspense for data fetching and asynchronous component rendering.
 
 ## Getting Started
 
